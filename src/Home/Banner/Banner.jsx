@@ -8,22 +8,27 @@ const Banner = () => {
           src="https://i.ibb.co/dk4KzwR/banner1.png"
           className="w-full md:rounded-xl"
         />
-        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#0000006c] to-[#0000006c]">
+        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000091] to-[#00000091]">
           <div className="text-center mx-auto w-2/3 text-white">
-            <h1 className="text-3xl md:text-6xl font-bold">
-              Affordable Price For Car Servicing
-            </h1>
+            <h1 className="text-3xl md:text-6xl font-bold">Industrial Robot</h1>
             <p className="md:text-xl py-5">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
+              An industrial robot is one that has been developed to automate{" "}
+              <br /> intensive production tasks such as those required by a
+              constantly moving assembly line.
             </p>
           </div>
         </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle btn-sm btn-outline btn-warning">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-1">
+          <a
+            href="#slide4"
+            className="btn btn-circle btn-sm btn-outline btn-warning"
+          >
             <FaArrowLeft />
           </a>
-          <a href="#slide2" className="btn btn-circle btn-sm btn-outline btn-warning">
+          <a
+            href="#slide2"
+            className="btn btn-circle btn-sm btn-outline btn-warning"
+          >
             <FaArrowRight />
           </a>
         </div>
@@ -33,22 +38,27 @@ const Banner = () => {
           src="https://i.ibb.co/GW4J2Vf/banner2.png"
           className="w-full md:rounded-xl"
         />
-        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#0000006c] to-[#0000006c]">
+        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000091] to-[#00000091]">
           <div className="text-center mx-auto w-2/3 text-white">
             <h1 className="text-3xl md:text-6xl font-bold">
-              Affordable Price For Car Servicing
+              AI Robot
             </h1>
             <p className="md:text-xl py-5">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
+            Robotics is a branch of AI, which is composed of Mechanical Engineering, <br /> and Computer Science for designing and application of robots.
             </p>
           </div>
         </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" className="btn btn-circle btn-sm btn-outline btn-warning">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-1">
+          <a
+            href="#slide1"
+            className="btn btn-circle btn-sm btn-outline btn-warning"
+          >
             <FaArrowLeft />
           </a>
-          <a href="#slide3" className="btn btn-circle btn-sm btn-outline btn-warning">
+          <a
+            href="#slide3"
+            className="btn btn-circle btn-sm btn-outline btn-warning"
+          >
             <FaArrowRight />
           </a>
         </div>
@@ -58,22 +68,27 @@ const Banner = () => {
           src="https://i.ibb.co/ZR95R2T/banner3.png"
           className="w-full md:rounded-xl"
         />
-        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#0000006c] to-[#0000006c]">
+        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000091] to-[#00000091]">
           <div className="text-center mx-auto w-2/3 text-white">
             <h1 className="text-3xl md:text-6xl font-bold">
-              Affordable Price For Car Servicing
+              Remote control
             </h1>
             <p className="md:text-xl py-5">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
+            A robot that is teleoperated (operation of a system from a distance) <br /> by any transmitting device, which in most cases is a remote.
             </p>
           </div>
         </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" className="btn btn-circle btn-sm btn-outline btn-warning">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-1">
+          <a
+            href="#slide2"
+            className="btn btn-circle btn-sm btn-outline btn-warning"
+          >
             <FaArrowLeft />
           </a>
-          <a href="#slide4" className="btn btn-circle btn-sm btn-outline btn-warning">
+          <a
+            href="#slide4"
+            className="btn btn-circle btn-sm btn-outline btn-warning"
+          >
             <FaArrowRight />
           </a>
         </div>
@@ -83,22 +98,25 @@ const Banner = () => {
           src="https://i.ibb.co/r5m9qDK/banner4.png"
           className="w-full md:rounded-xl"
         />
-        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#0000006c] to-[#0000006c]">
+        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000096] to-[#00000096]">
           <div className="text-center mx-auto w-2/3 text-white">
-            <h1 className="text-3xl md:text-6xl font-bold">
-              Affordable Price For Car Servicing
-            </h1>
+            <h1 className="text-3xl md:text-6xl font-bold">Robotic car</h1>
             <p className="md:text-xl py-5">
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
+            an automobile that is navigated and maneuvered by a computer without <br /> a need for human control or intervention under a range of driving situations and conditions.
             </p>
           </div>
         </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" className="btn btn-circle btn-sm btn-outline btn-warning">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-1">
+          <a
+            href="#slide3"
+            className="btn btn-circle btn-sm btn-outline btn-warning"
+          >
             <FaArrowLeft />
           </a>
-          <a href="#slide1" className="btn btn-circle btn-sm btn-outline btn-warning">
+          <a
+            href="#slide1"
+            className="btn btn-circle btn-sm btn-outline btn-warning"
+          >
             <FaArrowRight />
           </a>
         </div>

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layouts/Main";
 import Home from "../../Home/Home/Home";
+import PageNotFound from "../../PageNotFound/PageNotFound";
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+        path: "*",
+        element: <PageNotFound></PageNotFound>
+    }
   ]);
 
 export default router;

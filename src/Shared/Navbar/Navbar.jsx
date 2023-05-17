@@ -8,7 +8,7 @@ const NavItems = (
       <li><Link to="/blog" className="font-bold">Blog</Link></li>
       <li><Link to="/services" className="font-bold">All Toys</Link></li>
       <li><Link to="/booking" className="font-bold">My Toys</Link></li>
-      <li><Link to="/booking" className="font-bold">Add A Toy</Link></li>
+      <li><Link to="/booking" className="font-bold">Add Toy</Link></li>
     </>
   );
 
