@@ -6,13 +6,23 @@ import Swal from "sweetalert2";
 const Login = () => {
   const [passShow, setPassShow] = useState(false);
 
-  const { logInUser } = useContext(AuthContext);
+  const { logInUser, googleLogin } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
 
   const from = location.state?.from?.pathname || "/";
 
+  // googleLogin
+  const handleGoogleLogin = () =>{
+    googleLogin()
+    .then(result => {
+      console.log(result);
+      navigate(from, {replace: true})
+    })
+    .catch(error => console.log(error))
+  }
+    //Email password
   const handleLogIn = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -96,7 +106,7 @@ const Login = () => {
           <div className="text-center mb-7">
             <p className="font-semibold">Or Sign In with</p>
             <div className="flex items-center justify-center gap-4 my-4">
-              <button>
+              <button onClick={() => handleGoogleLogin()}>
                 <img
                   src="https://i.ibb.co/KjQdbSD/image.png"
                   alt=""
