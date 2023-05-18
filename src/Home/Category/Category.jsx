@@ -11,9 +11,9 @@ const Category = () => {
       <Tabs>
         <TabList>
           <Tab>Industrial</Tab>
-          <Tab>Remote control</Tab>
+          <Tab>Remote Control</Tab>
           <Tab>AI Robot</Tab>
-          <Tab>Robotic car</Tab>
+          <Tab>Robotic Car</Tab>
         </TabList>
 
         <TabPanel>
