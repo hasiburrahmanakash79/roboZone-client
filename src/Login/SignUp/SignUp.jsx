@@ -5,7 +5,7 @@ const SignUp = () => {
     <div className="hero min-h-screen">
       <div className="md:flex justify-between items-center gap-12 px-3">
         <div className="md:w-1/2">
-          <img src="https://i.ibb.co/hXmBqFz/image.png" alt="" />
+          <img src="https://i.ibb.co/jDMz1bj/login-page-banner.png" alt="" />
         </div>
         <div className="md:w-1/2 border rounded-lg bg-base-100">
         <div className=" text-center">

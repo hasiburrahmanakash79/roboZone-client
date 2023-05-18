@@ -4,6 +4,7 @@ import Home from "../../Home/Home/Home";
 import PageNotFound from "../../PageNotFound/PageNotFound";
 import Login from "../../Login/Login/Login";
 import SignUp from "../../Login/SignUp/SignUp";
+import AboutItems from "../../About/AboutItems/AboutItems";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     {
         path: "/signUp",
         element: <SignUp></SignUp>
+    },
+    {
+        path: "/about",
+        element: <AboutItems></AboutItems>
     },
     {
         path: "*",
