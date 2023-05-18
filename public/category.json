@@ -1,0 +1,106 @@
+[
+  {
+    "category": "Exploration",
+    "robots": [
+      {
+        "id": "001",
+        "name": "RoverBot",
+        "image": "rover.jpg",
+        "price": "$1999",
+        "rating": "4.5"
+      },
+      {
+        "id": "002",
+        "name": "AstroDroid",
+        "image": "astro.jpg",
+        "price": "$2499",
+        "rating": "4.7"
+      },
+      {
+        "id": "003",
+        "name": "ProbeMaster",
+        "image": "probe.jpg",
+        "price": "$1799",
+        "rating": "4.2"
+      }
+    ]
+  },
+  {
+    "category": "Assistance",
+    "robots": [
+      {
+        "id": "004",
+        "name": "HelpBot",
+        "image": "help.jpg",
+        "price": "$1599",
+        "rating": "4.3"
+      },
+      {
+        "id": "005",
+        "name": "Caretaker",
+        "image": "caretaker.jpg",
+        "price": "$1999",
+        "rating": "4.6"
+      },
+      {
+        "id": "006",
+        "name": "SupportDroid",
+        "image": "support.jpg",
+        "price": "$1799",
+        "rating": "4.4"
+      }
+    ]
+  },
+  {
+    "category": "Security",
+    "robots": [
+      {
+        "id": "007",
+        "name": "GuardianBot",
+        "image": "guardian.jpg",
+        "price": "$2199",
+        "rating": "4.8"
+      },
+      {
+        "id": "008",
+        "name": "Surveillance",
+        "image": "surveillance.jpg",
+        "price": "$2499",
+        "rating": "4.6"
+      },
+      {
+        "id": "009",
+        "name": "PatrolMaster",
+        "image": "patrol.jpg",
+        "price": "$1899",
+        "rating": "4.3"
+      }
+    ]
+  },
+  {
+    "category": "Industrial",
+    "robots": [
+      {
+        "id": "010",
+        "name": "FactoryBot",
+        "image": "factory.jpg",
+        "price": "$2999",
+        "rating": "4.9"
+      },
+      {
+        "id": "011",
+        "name": "Assembler",
+        "image": "assembler.jpg",
+        "price": "$2599",
+        "rating": "4.7"
+      },
+      {
+        "id": "012",
+        "name": "EngineerBot",
+        "image": "engineer.jpg",
+        "price": "$2799",
+        "rating": "4.5"
+      }
+    ]
+  }
+]

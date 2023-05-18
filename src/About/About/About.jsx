@@ -1,4 +1,6 @@
+
 const About = () => {
+
   return (
     <div className="md:flex justify-between items-center p-5 gap-10">
       <div className="md:w-1/2 mb-3">
@@ -14,6 +16,7 @@ const About = () => {
           artificial intelligence, machine learning, and advanced sensors, to
           create robots that are intelligent, versatile, and adaptable.
         </p>
+        
       </div>
       <div className="md:w-1/2">
         <img
