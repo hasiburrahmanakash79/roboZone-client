@@ -22,17 +22,10 @@ const Footer = () => {
         </div>
         <div>
           <span className="footer-title">Services</span>
-          <p className="link link-hover">Branding</p>
-          <p className="link link-hover">Design</p>
-          <p className="link link-hover">Marketing</p>
+          <p className="link link-hover">Buy Toy</p>
+          <p className="link link-hover">Sell Toy</p>
+          <p className="link link-hover">Repair Toy</p>
           <p className="link link-hover">Advertisement</p>
-        </div>
-        <div>
-          <span className="footer-title">Company</span>
-          <p className="link link-hover">About us</p>
-          <p className="link link-hover">Contact</p>
-          <p className="link link-hover">Jobs</p>
-          <p className="link link-hover">Press kit</p>
         </div>
         <div>
           <span className="footer-title">Legal</span>
@@ -40,6 +33,14 @@ const Footer = () => {
           <p className="link link-hover">Privacy policy</p>
           <p className="link link-hover">Cookie policy</p>
         </div>
+        <div>
+          <span className="footer-title">Address</span>
+          <p className="link link-hover">Dhanmondi-32, Shongkor, Dhaka</p>
+          <p className="link link-hover">+777 5654 6565</p>
+          <p className="link link-hover">toy.world@web.com</p>
+          <p className="link link-hover">Copy right 2023</p>
+        </div>
+        
       </div>
     </footer>
   );
