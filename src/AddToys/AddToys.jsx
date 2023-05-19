@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import useTitle from "../Hooks/useTitle";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
   useTitle('AddToy')
@@ -10,7 +11,7 @@ const AddToys = () => {
     event.preventDefault()
     const form = event.target;
     const toyName = form.toyName.value
-    const SellerName = form.SellerName.value
+    const sellerName = form.sellerName.value
     const email = form.email.value
     const category = form.category.value
     const price = form.price.value
@@ -18,8 +19,38 @@ const AddToys = () => {
     const quantity = form.quantity.value
     const image = form.image.value
     const description = form.description.value
+
+    const order = {
+      toyName, 
+      sellerName, 
+      email, 
+      category, 
+      price, 
+      Rating, 
+      quantity, 
+      image, 
+      description
+    }
+    console.log(order);
+
     
-    console.log({toyName, SellerName, email, category, price, Rating, quantity, image, description});
+    fetch('http://localhost:5000/allToys', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            Swal.fire(
+                'Successful',
+                'Your order is complete',
+                'success'
+              )
+        })
+     
   }
 
   return (
@@ -42,7 +73,7 @@ const AddToys = () => {
             <div className="form-control">
               <input
                 type="text"
-                name="SellerName"
+                name="sellerName"
                 placeholder="Seller Name"
                 className="input input-bordered"
               />
