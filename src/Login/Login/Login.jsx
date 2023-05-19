@@ -2,9 +2,11 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../../Hooks/useTitle";
 
 const Login = () => {
   const [passShow, setPassShow] = useState(false);
+  useTitle('login')
 
   const { logInUser, googleLogin } = useContext(AuthContext);
 

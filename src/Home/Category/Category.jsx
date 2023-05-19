@@ -1,12 +1,20 @@
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import 'react-tabs/style/react-tabs.css';
+import "react-tabs/style/react-tabs.css";
 
 const Category = () => {
   return (
     <div className="my-8">
-      <div className="text-center mb-5">
+      <div
+        className="text-center mb-5"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         <h1 className="text-4xl my-2 font-semibold">Category of Items</h1>
-        <p>Here is an overview of some types of <br /> robots that every manufacturer should know.</p>
+        <p>
+          Here is an overview of some types of <br /> robots that every
+          manufacturer should know.
+        </p>
       </div>
       <Tabs>
         <TabList>
@@ -16,15 +24,9 @@ const Category = () => {
           <Tab>Robotic Car</Tab>
         </TabList>
 
-        <TabPanel>
-          
-        </TabPanel>
-        <TabPanel>
-          
-        </TabPanel>
-        <TabPanel>
-          
-        </TabPanel>
+        <TabPanel></TabPanel>
+        <TabPanel></TabPanel>
+        <TabPanel></TabPanel>
       </Tabs>
     </div>
   );

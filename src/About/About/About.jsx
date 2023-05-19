@@ -1,5 +1,7 @@
+import useTitle from "../../Hooks/useTitle";
 
 const About = () => {
+  useTitle("About")
 
   return (
     <div className="md:flex justify-between items-center p-5 gap-10">

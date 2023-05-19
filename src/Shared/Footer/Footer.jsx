@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className=" p-10 bg-black text-white mt-5">
@@ -10,9 +12,13 @@ const Footer = () => {
           />
           <p>
             RobotWorld Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
           </p>
+          <div className="flex gap-3">
+            <a href="https://www.facebook.com/HasiburP.Akash/" target="_blank" rel="noreferrer"><FaFacebook></FaFacebook></a>
+            <a href="https://www.instagram.com/hasiburrahmanakash79/" target="_blank" rel="noreferrer"><FaInstagram></FaInstagram></a>
+            <a href="https://twitter.com/HasiburRakash79" target="_blank" rel="noreferrer"><FaTwitter></FaTwitter></a>
+            <a href="https://www.youtube.com/@HasiburRahmanAkash/videos" target="_blank" rel="noreferrer"><FaYoutube></FaYoutube></a>
+          </div>
         </div>
         <div>
           <span className="footer-title">Services</span>

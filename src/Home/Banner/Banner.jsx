@@ -9,7 +9,7 @@ const Banner = () => {
           className="w-full md:rounded-xl"
         />
         <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000091] to-[#00000091]">
-          <div className="text-center mx-auto w-2/3 text-white">
+          <div className="text-center mx-auto w-2/3 text-white" data-aos="zoom-in">
             <h1 className="text-3xl md:text-6xl font-bold">Industrial Robot</h1>
             <p className="md:text-xl py-5">
               An industrial robot is one that has been developed to automate{" "}
@@ -69,7 +69,7 @@ const Banner = () => {
           className="w-full md:rounded-xl"
         />
         <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000091] to-[#00000091]">
-          <div className="text-center mx-auto w-2/3 text-white">
+          <div className="text-center mx-auto w-2/3 text-white" data-aos="zoom-in">
             <h1 className="text-3xl md:text-6xl font-bold">
               Remote control
             </h1>
@@ -98,8 +98,8 @@ const Banner = () => {
           src="https://i.ibb.co/r5m9qDK/banner4.png"
           className="w-full md:rounded-xl"
         />
-        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000096] to-[#00000096]">
-          <div className="text-center mx-auto w-2/3 text-white">
+        <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000096] to-[#00000096]" >
+          <div className="text-center mx-auto w-2/3 text-white" data-aos="zoom-in">
             <h1 className="text-3xl md:text-6xl font-bold">Robotic car</h1>
             <p className="md:text-xl py-5">
             an automobile that is navigated and maneuvered by a computer without <br /> a need for human control or intervention under a range of driving situations and conditions.
