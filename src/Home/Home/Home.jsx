@@ -1,6 +1,7 @@
 import useTitle from "../../Hooks/useTitle";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
+import CustomerReview from "../CustomerReview/CustomerReview";
 import PhotoGallery from "../PhotoGallery/PhotoGallery";
 
 
@@ -11,6 +12,7 @@ const Home = () => {
            <Banner></Banner> 
            <Category></Category>
            <PhotoGallery></PhotoGallery>
+           <CustomerReview></CustomerReview>
         </div>
     );
 };
