@@ -16,8 +16,10 @@ const ToyDetails = () => {
   return (
     <div className=" p-10 m-5 border-2 rounded-xl">
       <div className="md:flex gap-10">
-        <div className="md:w-1/3 mb-5">
-          <img src={image} className="" alt="" />
+        <div className="avatar w-1/3 ">
+          <div className="w-full rounded">
+            <img src={image} />
+          </div>
         </div>
         <div className=" md:w-2/3">
           <div>
