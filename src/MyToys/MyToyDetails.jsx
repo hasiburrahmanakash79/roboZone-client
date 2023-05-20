@@ -1,15 +1,16 @@
-import { FaTrashAlt } from "react-icons/fa";
+import { FaEdit, FaTimes } from "react-icons/fa";
 
 const MyToyDetails = ({ myToy }) => {
   const { image, price, toyName, category, quantity } = myToy;
 
   return (
     <tr>
+        <td><button><FaTimes className="text-2xl"></FaTimes></button></td>
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="w-24 rounded">
-              <img src={image} />
+              <img  data-aos="zoom-out" src={image} />
             </div>
           </div>
           <div>
@@ -25,9 +26,7 @@ const MyToyDetails = ({ myToy }) => {
       </td>
       <td>{quantity}</td>
       <th>
-        <div>
-            <FaTrashAlt></FaTrashAlt>
-        </div>
+        <button><FaEdit className="text-3xl"></FaEdit></button>
       </th>
     </tr>
   );

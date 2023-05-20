@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         {
           path: '/toyDetail/:id',
           element: <ToyDetails></ToyDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+          loader: ({params}) => fetch(`https://robot-world-server.vercel.app/singleToy/${params.id}`)
         }
       ]
     },

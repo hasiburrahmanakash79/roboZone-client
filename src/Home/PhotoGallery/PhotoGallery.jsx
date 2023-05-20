@@ -3,7 +3,7 @@ const PhotoGallery = () => {
     <div className="my-10">
       <div
         className="text-center mb-8"
-        data-aos="fade-right"
+        data-aos="fade-left"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >

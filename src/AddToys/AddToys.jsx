@@ -34,7 +34,7 @@ const AddToys = () => {
     console.log(order);
 
     
-    fetch('http://localhost:5000/allToys', {
+    fetch('https://robot-world-server.vercel.app/allToys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

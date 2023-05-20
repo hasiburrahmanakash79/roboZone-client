@@ -9,7 +9,7 @@ const MyToys = () => {
 
   const { user } = useContext(AuthContext);
 
-  const url = `http://localhost:5000/myToy?email=${user?.email}`;
+  const url = `https://robot-world-server.vercel.app/myToy?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -20,15 +20,16 @@ const MyToys = () => {
   }, [url]);
 
   return (
-    <div className="overflow-x-auto w-full">
+    <div className="overflow-x-auto border rounded-xl w-full">
       <table className="table w-full">
         {/* head */}
         <thead>
           <tr>
+            <th></th>
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th></th>
+            <th>Update Items</th>
           </tr>
         </thead>
         <tbody>

@@ -6,7 +6,7 @@ const AllToys = () => {
   useTitle("AllToys");
   const [toys, setToys] = useState([]);
 
-  const url = "http://localhost:5000/allToys";
+  const url = "https://robot-world-server.vercel.app/allToys";
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
