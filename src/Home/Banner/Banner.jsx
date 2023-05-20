@@ -10,11 +10,10 @@ const Banner = () => {
         />
         <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000091] to-[#00000091]">
           <div className="text-center mx-auto w-2/3 text-white" data-aos="zoom-in">
-            <h1 className="text-3xl md:text-6xl font-bold">Industrial Robot</h1>
+            <h1 className="text-2xl md:text-6xl font-bold">Industrial Robot</h1>
             <p className="md:text-xl py-5">
-              An industrial robot is one that has been developed to automate{" "}
-              <br /> intensive production tasks such as those required by a
-              constantly moving assembly line.
+              An industrial robot is one that has developed to automate{" "}
+              <br /> intensive production tasks such as those required assembly line.
             </p>
           </div>
         </div>
@@ -40,11 +39,11 @@ const Banner = () => {
         />
         <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000091] to-[#00000091]">
           <div className="text-center mx-auto w-2/3 text-white">
-            <h1 className="text-3xl md:text-6xl font-bold">
+            <h1 className="text-2xl md:text-6xl font-bold">
               AI Robot
             </h1>
             <p className="md:text-xl py-5">
-            Robotics is a branch of AI, which is composed of Mechanical Engineering, <br /> and Computer Science for designing and application of robots.
+            Robotics is a branch of AI, Mechanical Engineering, <br /> and Computer Science for designing and application robots.
             </p>
           </div>
         </div>
@@ -70,11 +69,11 @@ const Banner = () => {
         />
         <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000091] to-[#00000091]">
           <div className="text-center mx-auto w-2/3 text-white" data-aos="zoom-in">
-            <h1 className="text-3xl md:text-6xl font-bold">
+            <h1 className="text-2xl md:text-6xl font-bold">
               Remote control
             </h1>
             <p className="md:text-xl py-5">
-            A robot that is teleoperated (operation of a system from a distance) <br /> by any transmitting device, which in most cases is a remote.
+            A robot that is teleoperated <br /> by any transmitting device, which in most cases is a remote.
             </p>
           </div>
         </div>
@@ -100,9 +99,9 @@ const Banner = () => {
         />
         <div className="absolute flex md:rounded-xl items-center h-full left-0 right-0 bg-gradient-to-r from-[#00000096] to-[#00000096]" >
           <div className="text-center mx-auto w-2/3 text-white" data-aos="zoom-in">
-            <h1 className="text-3xl md:text-6xl font-bold">Robotic car</h1>
+            <h1 className="text-2xl md:text-6xl font-bold">Robotic car</h1>
             <p className="md:text-xl py-5">
-            an automobile that is navigated and maneuvered by a computer without <br /> a need for human control or intervention under a range of driving situations and conditions.
+            an automobile that is a computer we a need for <br /> human control for driving situations and conditions.
             </p>
           </div>
         </div>

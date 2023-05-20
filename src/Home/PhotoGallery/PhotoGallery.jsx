@@ -1,13 +1,13 @@
 const PhotoGallery = () => {
   return (
-    <div className="my-10">
+    <div className="my-10 px-2">
       <div
         className="text-center mb-8"
         data-aos="fade-left"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <h1 className="text-4xl font-semibold ">Your Photo Gallery</h1>
+        <h1 className="text-2xl md:text-4xl font-semibold ">Your Photo Gallery</h1>
         <p>
           A robot is a type of automated machine that can execute specific{" "}
           <br /> tasks with little or no human intervention and with speed and

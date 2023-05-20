@@ -2,13 +2,13 @@ import { FaStar } from "react-icons/fa";
 
 const CustomerReview = () => {
   return (
-    <div>
+    <div className="px-2">
       <div>
-        <h1 className="text-center text-4xl font-semibold my-10">
+        <h1 className="text-center text-2xl md:text-4xl font-semibold my-10">
           Our Happy Client
         </h1>
       </div>
-      <div className="grid md:grid-cols-4 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div
           className="text-center border rounded-xl p-7"
           data-aos="fade-up"

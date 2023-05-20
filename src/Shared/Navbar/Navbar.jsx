@@ -23,26 +23,29 @@ const Navbar = () => {
           Blog
         </Link>
       </li>
-      {
-        user?.email ? <><li>
+      <li>
         <Link to="/allToy" className="font-semibold">
           All Toys
         </Link>
       </li>
-      <li>
-        <Link to="/myToy" className="font-semibold">
-          My Toys
-        </Link>
-      </li>
-      <li>
-        <Link to="/addToy" className="font-semibold">
-          Add Toy
-        </Link>
-      </li></> : <></>
-      }
+      {user?.email ? (
+        <>
+          <li>
+            <Link to="/myToy" className="font-semibold">
+              My Toys
+            </Link>
+          </li>
+          <li>
+            <Link to="/addToy" className="font-semibold">
+              Add Toy
+            </Link>
+          </li>
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
-
 
   const handleLogOut = () => {
     logOutUser()
