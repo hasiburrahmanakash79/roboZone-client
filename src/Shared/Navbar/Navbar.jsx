@@ -3,43 +3,46 @@ import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-const NavItems = (
-  <>
-    <li>
-      <Link to="/" className="font-semibold">
-        Home
-      </Link>
-    </li>
-    <li>
-      <Link to="/about" className="font-semibold">
-        About
-      </Link>
-    </li>
-    <li>
-      <Link to="/blog" className="font-semibold">
-        Blog
-      </Link>
-    </li>
-    <li>
-      <Link to="/allToy" className="font-semibold">
-        All Toys
-      </Link>
-    </li>
-    <li>
-      <Link to="/myToy" className="font-semibold">
-        My Toys
-      </Link>
-    </li>
-    <li>
-      <Link to="/addToy" className="font-semibold">
-        Add Toy
-      </Link>
-    </li>
-  </>
-);
-
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
+
+  const NavItems = (
+    <>
+      <li>
+        <Link to="/" className="font-semibold">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="/about" className="font-semibold">
+          About
+        </Link>
+      </li>
+      <li>
+        <Link to="/blog" className="font-semibold">
+          Blog
+        </Link>
+      </li>
+      {
+        user?.email ? <><li>
+        <Link to="/allToy" className="font-semibold">
+          All Toys
+        </Link>
+      </li>
+      <li>
+        <Link to="/myToy" className="font-semibold">
+          My Toys
+        </Link>
+      </li>
+      <li>
+        <Link to="/addToy" className="font-semibold">
+          Add Toy
+        </Link>
+      </li></> : <></>
+      }
+    </>
+  );
+
 
   const handleLogOut = () => {
     logOutUser()

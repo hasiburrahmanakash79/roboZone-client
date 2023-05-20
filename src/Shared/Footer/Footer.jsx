@@ -13,7 +13,7 @@ const Footer = () => {
           <p>
             RobotWorld Industries Ltd.
           </p>
-          <div className="flex gap-3">
+          <div className="flex gap-3 mt-3">
             <a href="https://www.facebook.com/HasiburP.Akash/" target="_blank" rel="noreferrer"><FaFacebook></FaFacebook></a>
             <a href="https://www.instagram.com/hasiburrahmanakash79/" target="_blank" rel="noreferrer"><FaInstagram></FaInstagram></a>
             <a href="https://twitter.com/HasiburRakash79" target="_blank" rel="noreferrer"><FaTwitter></FaTwitter></a>

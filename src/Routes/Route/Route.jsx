@@ -10,6 +10,7 @@ import Blogs from "../../Blogs/Blogs";
 import AllToys from "../../AllToys/AllToys";
 import MyToys from "../../MyToys/MyToys";
 import ToyDetails from "../../ToyDetails/ToyDetails";
+import PrivateRoute from "../PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/addToy",
-          element: <AddToys></AddToys>
+          element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
         },
         {
           path: "/blog",
@@ -31,15 +32,15 @@ const router = createBrowserRouter([
         },
         {
         path: "/allToy",
-        element: <AllToys></AllToys>
+        element: <PrivateRoute><AllToys></AllToys></PrivateRoute>
         },
         {
           path: '/myToy',
-          element: <MyToys></MyToys>
+          element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
         },
         {
           path: '/toyDetail/:id',
-          element: <ToyDetails></ToyDetails>,
+          element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
           loader: ({params}) => fetch(`https://robot-world-server.vercel.app/singleToy/${params.id}`)
         }
       ]

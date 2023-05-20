@@ -4,65 +4,68 @@ import useTitle from "../Hooks/useTitle";
 import Swal from "sweetalert2";
 
 const AddToys = () => {
-  useTitle('AddToy')
+  useTitle("AddToy");
   const { user } = useContext(AuthContext);
 
-  const handleAddToy = event =>{
-    event.preventDefault()
+  const handleAddToy = (event) => {
+    event.preventDefault();
     const form = event.target;
-    const toyName = form.toyName.value
-    const sellerName = form.sellerName.value
-    const email = form.email.value
-    const category = form.category.value
-    const price = form.price.value
-    const Rating = form.Rating.value
-    const quantity = form.quantity.value
-    const image = form.image.value
-    const description = form.description.value
+    const toyName = form.toyName.value;
+    const sellerName = form.sellerName.value;
+    const email = form.email.value;
+    const category = form.category.value;
+    const price = form.price.value;
+    const Rating = form.Rating.value;
+    const quantity = form.quantity.value;
+    const image = form.image.value;
+    const description = form.description.value;
 
     const order = {
-      toyName, 
-      sellerName, 
-      email, 
-      category, 
-      price, 
-      Rating, 
-      quantity, 
-      image, 
-      description
-    }
+      toyName,
+      sellerName,
+      email,
+      category,
+      price,
+      Rating,
+      quantity,
+      image,
+      description,
+    };
     console.log(order);
 
-    
-    fetch('https://robot-world-server.vercel.app/allToys', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(order)
-        })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data);
-            Swal.fire(
-                'Successful',
-                'Your order is complete',
-                'success'
-              )
-        })
-     
-  }
+    fetch("https://robot-world-server.vercel.app/allToys", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(order),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        Swal.fire("Successful", "Your order is complete", "success");
+      });
+  };
 
   return (
     <div>
-        <div className="mx-auto text-center flex flex-col justify-center items-center">
-            <img src="https://i.ibb.co/6gYhYsf/gold-robot-logo.png" className="w-20 mb-4" alt="" />
-            <h1 className="text-center text-4xl font-semibold mb-7">Added your favorite toys</h1>
-        </div>
+      <div className="mx-auto text-center flex flex-col justify-center items-center">
+        <img
+          src="https://i.ibb.co/6gYhYsf/gold-robot-logo.png"
+          className="w-20 mb-4"
+          alt=""
+        />
+        <h1 className="text-center text-4xl font-semibold mb-7">
+          Added your favorite toys
+        </h1>
+      </div>
       <div className="card-body rounded-xl bg-gray-100 md:p-20">
         <form onSubmit={handleAddToy}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="form-control">
+              <label className="label">
+                <span className="label-text">Toy Name</span>
+              </label>
               <input
                 type="text"
                 name="toyName"
@@ -71,14 +74,21 @@ const AddToys = () => {
               />
             </div>
             <div className="form-control">
+              <label className="label">
+                <span className="label-text">Seller Name Email</span>
+              </label>
               <input
                 type="text"
                 name="sellerName"
+                defaultValue={user?.displayName}
                 placeholder="Seller Name"
                 className="input input-bordered"
               />
             </div>
             <div className="form-control">
+              <label className="label">
+                <span className="label-text">Seller Email</span>
+              </label>
               <input
                 type="text"
                 name="email"
@@ -88,6 +98,9 @@ const AddToys = () => {
               />
             </div>
             <div className="form-control">
+              <label className="label">
+                <span className="label-text">Category</span>
+              </label>
               <select className="input input-bordered" name="category">
                 <option selected>Industrial</option>
                 <option>Remote control</option>
@@ -97,6 +110,9 @@ const AddToys = () => {
             </div>
 
             <div className="form-control">
+              <label className="label">
+                <span className="label-text">Price</span>
+              </label>
               <input
                 type="text"
                 name="price"
@@ -105,6 +121,9 @@ const AddToys = () => {
               />
             </div>
             <div className="form-control">
+              <label className="label">
+                <span className="label-text">Rating</span>
+              </label>
               <input
                 type="text"
                 name="Rating"
@@ -113,6 +132,9 @@ const AddToys = () => {
               />
             </div>
             <div className="form-control">
+              <label className="label">
+                <span className="label-text">quantity</span>
+              </label>
               <input
                 type="text"
                 name="quantity"
@@ -121,6 +143,9 @@ const AddToys = () => {
               />
             </div>
             <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo URL</span>
+              </label>
               <input
                 type="text"
                 name="image"
@@ -130,6 +155,9 @@ const AddToys = () => {
             </div>
           </div>
           <div className="form-control mt-6">
+            <label className="label">
+              <span className="label-text">Description</span>
+            </label>
             <textarea
               name="description"
               placeholder="Toy description"
