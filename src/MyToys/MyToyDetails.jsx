@@ -1,7 +1,7 @@
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const MyToyDetails = ({ myToy, handleDelete }) => {
+const MyToyDetails = ({ myToy, handleDelete, updateToyDetails }) => {
   const { _id, image, price, toyName, category, quantity } = myToy;
 
   return (
@@ -27,7 +27,7 @@ const MyToyDetails = ({ myToy, handleDelete }) => {
         <div className="flex gap-10">
           <Link to="/updateToy">
             <button>
-              <FaEdit className="text-3xl"></FaEdit>
+              <FaEdit onClick={() => updateToyDetails(_id)} className="text-3xl"></FaEdit>
             </button>
           </Link>
           <button onClick={() => handleDelete(_id)}>

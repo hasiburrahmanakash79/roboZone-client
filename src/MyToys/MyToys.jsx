@@ -48,6 +48,9 @@ const MyToys = () => {
     });
   };
 
+  const updateToyDetails = (id) =>{
+    console.log(id);
+  }
 
   return (
     <div className="overflow-x-auto border rounded-xl w-full">
@@ -64,7 +67,7 @@ const MyToys = () => {
         <tbody>
           {
             myToys.map(myToy => <MyToyDetails key={myToy._id}
-              handleDelete={handleDelete} myToy={myToy}></MyToyDetails>)
+              handleDelete={handleDelete} myToy={myToy} updateToyDetails={updateToyDetails}></MyToyDetails>)
           }
         </tbody>
       </table>
