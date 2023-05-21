@@ -10,6 +10,9 @@ const AllToys = () => {
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState([]);
 
+  const [seeMore, setSeeMore] = useState(false);
+  const [displayCount, setDisplayCount] = useState(20);
+
   const url = "https://robot-world-server.vercel.app/allToys";
   useEffect(() => {
     fetch(url)
@@ -30,7 +33,12 @@ const AllToys = () => {
     }
   }, [search, toys]);
 
-  console.log(searchData);
+  // see more button 
+  const handleSeeMore = () => {
+    setSeeMore(true);
+    setDisplayCount(searchData.length);
+  }
+
   return (
     <div>
       <h1 className="text-4xl text-center font-semibold my-7">
@@ -64,12 +72,19 @@ const AllToys = () => {
               </tr>
             </thead>
             <tbody>
-              {searchData.map((toy) => (
+              {searchData.slice(0, displayCount).map((toy) => (
                 <SingleToy key={toy._id} toy={toy}></SingleToy>
               ))}
             </tbody>
           </table>
         </div>
+      </div>
+      <div className="text-center my-5">
+        {!seeMore && (
+          <button onClick={handleSeeMore} className="btn bg-black">
+            See More
+          </button>
+        )}
       </div>
     </div>
   );
