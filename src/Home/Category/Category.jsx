@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import SubCategory from "./SubCategory";
 
 const Category = () => {
   const [allData, setAllData] = useState([]);
@@ -46,7 +47,6 @@ const Category = () => {
       >
         <h1 className="text-2xl md:text-4xl my-2 font-semibold">
           Category of Items
-          
         </h1>
         <p>
           Here is an overview of some types of <br /> robots that every
@@ -55,35 +55,77 @@ const Category = () => {
       </div>
       <Tabs>
         <TabList>
-          <Tab onClick={() => {
-            setIndustrial(true)
-            setRemote(false)
-            setCar(false)
-            setAi(false)
-          }}>Industrial</Tab>
-          <Tab onClick={() => {
-            setIndustrial(false)
-            setRemote(true)
-            setCar(false)
-            setAi(false)
-          }}>Remote Control</Tab>
-          <Tab onClick={() => {
-            setIndustrial(false)
-            setRemote(false)
-            setCar(false)
-            setAi(true)
-          }}>AI Robot</Tab>
-          <Tab onClick={() => {
-            setIndustrial(false)
-            setRemote(false)
-            setCar(true)
-            setAi(false)
-          }}>Robotic Car</Tab>
+          <Tab
+            onClick={() => {
+              setIndustrial(true);
+              setRemote(false);
+              setCar(false);
+              setAi(false);
+            }}
+          >
+            Industrial
+          </Tab>
+          <Tab
+            onClick={() => {
+              setIndustrial(false);
+              setRemote(true);
+              setCar(false);
+              setAi(false);
+            }}
+          >
+            Remote Control
+          </Tab>
+          <Tab
+            onClick={() => {
+              setIndustrial(false);
+              setRemote(false);
+              setCar(false);
+              setAi(true);
+            }}
+          >
+            AI Robot
+          </Tab>
+          <Tab
+            onClick={() => {
+              setIndustrial(false);
+              setRemote(false);
+              setCar(true);
+              setAi(false);
+            }}
+          >
+            Robotic Car
+          </Tab>
         </TabList>
 
-        <TabPanel></TabPanel>
-        <TabPanel></TabPanel>
-        <TabPanel></TabPanel>
+        {/* Category items  */}
+        <TabPanel>
+          <div className="grid lg:grid-cols-4 gap-5 p-3 rounded-2xl">
+            {filterData.map((robots) => (
+              <SubCategory key={robots._id} robots={robots}></SubCategory>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid lg:grid-cols-4 gap-5 p-3 rounded-2xl">
+            {filterData.map((robots) => (
+              <SubCategory key={robots._id} robots={robots}></SubCategory>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid lg:grid-cols-4 gap-5 p-3 rounded-2xl">
+            {filterData.map((robots) => (
+              <SubCategory key={robots._id} robots={robots}></SubCategory>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid lg:grid-cols-4 gap-5 p-3 rounded-2xl">
+            {filterData.map((robots) => (
+              <SubCategory key={robots._id} robots={robots}></SubCategory>
+            ))}
+          </div>
+        </TabPanel>
       </Tabs>
     </div>
   );
