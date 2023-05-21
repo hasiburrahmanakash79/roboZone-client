@@ -20,7 +20,7 @@ const UpdateToy = () => {
       description
     }
     console.log(update);
-    fetch(`http://localhost:5000/allToys/update/${id}`,{
+    fetch(`https://robot-world-server.vercel.app/allToys/update/${id}`,{
       method: 'PUT',
       headers: {
         'content-type': 'application/json'
