@@ -40,8 +40,9 @@ const router = createBrowserRouter([
           element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
         },
         {
-          path: '/updateToy',
-          element: <UpdateToy></UpdateToy>
+          path: '/updateToy/:id',
+          element: <UpdateToy></UpdateToy>,
+          loader:({params}) => fetch(`https://robot-world-server.vercel.app/singleToy/${params.id}`)
         },
         {
           path: '/toyDetail/:id',

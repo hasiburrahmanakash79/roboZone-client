@@ -8,9 +8,13 @@ const MyToys = () => {
   useTitle("My Toys");
   const [myToys, setMyToys] = useState([]);
 
+  // const [updateId, setUpdateId] = useState()
+
+
   const { user } = useContext(AuthContext);
 
-  const url = `https://robot-world-server.vercel.app/myToy?email=${user?.email}`;
+  const url = `https://robot-world-server.vercel.app/myToy?email=${user?.email}&type="asc"`;
+
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -48,9 +52,9 @@ const MyToys = () => {
     });
   };
 
-  const updateToyDetails = (id) =>{
-    console.log(id);
-  }
+  // const updateToyDetails = (id) =>{
+  //   console.log(id);
+  // }
 
   return (
     <div className="overflow-x-auto border rounded-xl w-full">
@@ -67,7 +71,7 @@ const MyToys = () => {
         <tbody>
           {
             myToys.map(myToy => <MyToyDetails key={myToy._id}
-              handleDelete={handleDelete} myToy={myToy} updateToyDetails={updateToyDetails}></MyToyDetails>)
+              handleDelete={handleDelete} myToy={myToy}></MyToyDetails>)
           }
         </tbody>
       </table>
