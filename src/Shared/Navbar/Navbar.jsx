@@ -67,8 +67,8 @@ const Navbar = () => {
             {NavItems}
           </ul>
         </div>
-        <Link to="/" className=" w-14 md:w-16">
-          <img src="https://i.ibb.co/98q6Fq5/robot-logo-on-bar.png" alt="" />
+        <Link to="/" className="">
+          <img src="https://i.ibb.co/51DyF86/logo.png" alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -77,11 +77,14 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src={user.photoURL} />
-              </div>
-            </label>
+            <div className="tooltip tooltip-left" data-tip={user?.displayName}>
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user.photoURL} />
+                </div>
+              </label>
+            </div>
+
             <ul
               tabIndex={0}
               className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"

@@ -20,8 +20,6 @@ const Category = () => {
       });
   }, []);
 
-  console.log(allData);
-
   const filterData = allData.filter((item) => {
     if (industrial) {
       return item.category === "Industrial";
@@ -36,7 +34,8 @@ const Category = () => {
       return item.category === "Robotic Car";
     }
   });
-  console.log(filterData);
+  const categoryData = filterData.slice(0, 4);
+
   return (
     <div className="my-8 px-2">
       <div
@@ -53,8 +52,12 @@ const Category = () => {
           manufacturer should know.
         </p>
       </div>
-      <Tabs>
-        <TabList>
+      <Tabs
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
+        <TabList className="text-center">
           <Tab
             onClick={() => {
               setIndustrial(true);
@@ -96,32 +99,32 @@ const Category = () => {
             Robotic Car
           </Tab>
         </TabList>
-
+        <hr />
         {/* Category items  */}
         <TabPanel>
           <div className="grid lg:grid-cols-4 gap-5 p-3 rounded-2xl">
-            {filterData.map((robots) => (
+            {categoryData.map((robots) => (
               <SubCategory key={robots._id} robots={robots}></SubCategory>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid lg:grid-cols-4 gap-5 p-3 rounded-2xl">
-            {filterData.map((robots) => (
+            {categoryData.map((robots) => (
               <SubCategory key={robots._id} robots={robots}></SubCategory>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid lg:grid-cols-4 gap-5 p-3 rounded-2xl">
-            {filterData.map((robots) => (
+            {categoryData.map((robots) => (
               <SubCategory key={robots._id} robots={robots}></SubCategory>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid lg:grid-cols-4 gap-5 p-3 rounded-2xl">
-            {filterData.map((robots) => (
+            {categoryData.map((robots) => (
               <SubCategory key={robots._id} robots={robots}></SubCategory>
             ))}
           </div>

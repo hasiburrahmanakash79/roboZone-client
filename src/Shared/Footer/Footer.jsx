@@ -11,7 +11,7 @@ const Footer = () => {
             alt=""
           />
           <p>
-            RobotWorld Industries Ltd.
+          RoboZone Industries Ltd.
           </p>
           <div className="flex gap-3 mt-3">
             <a href="https://www.facebook.com/HasiburP.Akash/" target="_blank" rel="noreferrer"><FaFacebook></FaFacebook></a>
@@ -37,7 +37,7 @@ const Footer = () => {
           <span className="footer-title">Address</span>
           <p className="link link-hover">Dhanmondi-32, Shongkor, Dhaka</p>
           <p className="link link-hover">+777 5654 6565</p>
-          <p className="link link-hover">toy.world@web.com</p>
+          <p className="link link-hover">RoboZone@web.com</p>
           <p className="link link-hover">Copy right 2023</p>
         </div>
         

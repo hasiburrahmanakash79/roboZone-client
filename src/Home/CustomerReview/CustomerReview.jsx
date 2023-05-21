@@ -1,4 +1,5 @@
 import { FaStar } from "react-icons/fa";
+import Marquee from "react-fast-marquee";
 
 const CustomerReview = () => {
   return (
@@ -8,6 +9,14 @@ const CustomerReview = () => {
           Our Happy Client
         </h1>
       </div>
+      <Marquee>
+        <div className="mb-5">
+          I recently purchased a robot from this website and I am extremely
+          satisfied with my purchase. The ordering process was smooth, and the
+          robot was delivered promptly. I highly recommend this website for
+          anyone looking to buy a robot.
+        </div>
+      </Marquee>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div
           className="text-center border rounded-xl p-7"
