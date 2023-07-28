@@ -31,7 +31,7 @@ const CustomerReview = () => {
           <div>
             <h4 className="text-2xl">Harrison Lorenza</h4>
             <p>
-              <small>CALIFORNIA</small>{" "}
+              <small>CALIFORNIA</small>
             </p>
             <div className="flex justify-center gap-1 text-yellow-600 my-3">
               <FaStar />
