@@ -12,6 +12,7 @@ import MyToys from "../../MyToys/MyToys";
 import ToyDetails from "../../ToyDetails/ToyDetails";
 import PrivateRoute from "../PrivateRoute";
 import UpdateToy from "../../UpdateToy/UpdateToy";
+import Dashboard from "../../Layouts/Dashboard";
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
           loader: ({params}) => fetch(`https://robot-world-server.vercel.app/singleToy/${params.id}`)
         }
       ]
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard></Dashboard>
     },
     {
         path: "/login",

@@ -40,6 +40,11 @@ const Navbar = () => {
               Add Toy
             </Link>
           </li>
+          <li>
+            <Link to="/dashboard" className="font-semibold">
+              Dashboard
+            </Link>
+          </li>
         </>
       ) : (
         <></>

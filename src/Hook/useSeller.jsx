@@ -1,20 +1,20 @@
 import { useContext } from 'react';
-import { useQuery } from "react-query";
+import { useQuery } from 'react-query';
 import { AuthContext } from "../Provider/AuthProvider";
 import useAxiosSecure from "./useAxiosSecure";
 
-const useInstructor = () => {
+const useSeller = () => {
     const {user} = useContext(AuthContext)
     const [axiosSecure] = useAxiosSecure()
-    const {data: isInstructor, isLoading: isInstructorLoading} = useQuery({
-        queryKey: ['isInstructor', user?.email],
+    const {data: isSeller, isLoading: isSellerLoading} = useQuery({
+        queryKey: ['isSeller', user?.email],
         queryFn: async () => {
             const res = await axiosSecure.get(`/users/instructor/${user?.email}`);
             return res.data.instructor;
             
         }
     })
-    return [isInstructor, isInstructorLoading]
+    return [isSeller, isSellerLoading]
 };
 
-export default useInstructor;
+export default useSeller;
