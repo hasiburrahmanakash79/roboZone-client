@@ -13,6 +13,7 @@ import ToyDetails from "../../ToyDetails/ToyDetails";
 import PrivateRoute from "../PrivateRoute";
 import UpdateToy from "../../UpdateToy/UpdateToy";
 import Dashboard from "../../Layouts/Dashboard";
+import AllUsers from "../../Dashboard/Admin/Allusers";
 
 
 const router = createBrowserRouter([
@@ -54,7 +55,13 @@ const router = createBrowserRouter([
     },
     {
       path: "/dashboard",
-      element: <Dashboard></Dashboard>
+      element: <Dashboard></Dashboard>,
+      children: [
+        {
+          path:'allUser',
+          element: <AllUsers></AllUsers>
+        }
+      ]
     },
     {
         path: "/login",

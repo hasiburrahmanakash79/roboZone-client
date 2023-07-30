@@ -9,8 +9,8 @@ const useSeller = () => {
     const {data: isSeller, isLoading: isSellerLoading} = useQuery({
         queryKey: ['isSeller', user?.email],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/users/instructor/${user?.email}`);
-            return res.data.instructor;
+            const res = await axiosSecure.get(`/users/seller/${user?.email}`);
+            return res.data.seller;
             
         }
     })

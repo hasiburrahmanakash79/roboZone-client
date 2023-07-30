@@ -12,16 +12,15 @@ import {
   FcApproval,
 } from "react-icons/fc";
 import { NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../Hook/useAdmin";
 import useSeller from "../Hook/useSeller";
-import useAdmin from "../Hook/useSeller";
 
 const Dashboard = () => {
-  const [isAdmin] = useAdmin();
-  const [isSeller] = useSeller();
-
+  const [isAdmin] = useAdmin()
+  const [isSeller] = useSeller()
   return (
     <div>
-      <div className="drawer md:drawer-open">
+      <div className="drawer md:drawer-mobile">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           {/* Page content here */}
@@ -52,7 +51,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink to="/dashboard/manageClass">
-                    <FcBookmark></FcBookmark> Manage items
+                    <FcBookmark></FcBookmark> Manage Classes
                   </NavLink>
                 </li>
                 <li>
@@ -66,22 +65,22 @@ const Dashboard = () => {
               <>
                 <li>
                   <NavLink to="/">
-                    <FcHome></FcHome> Seller Home
+                    <FcHome></FcHome> Instructor Home
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/dashboard/addClass">
-                    <FcAddDatabase></FcAddDatabase> Add Items
+                    <FcAddDatabase></FcAddDatabase> Add Class
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/dashboard/myClass">
-                    <FcBookmark></FcBookmark> My Items
+                    <FcBookmark></FcBookmark> My Classes
                   </NavLink>
                 </li>
               </>
             )}
-            {!isAdmin && !isSeller && (
+            {!isAdmin && !isSeller &&(
               <>
                 <li>
                   <NavLink to="/dashboard/userProfile">
