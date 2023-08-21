@@ -1,16 +1,4 @@
-import {
-  FcClapperboard,
-  FcBusinessman,
-  FcAddDatabase,
-  FcCamera,
-  FcHome,
-  FcApprove,
-  FcBookmark,
-  FcContacts,
-  FcLike,
-  FcCurrencyExchange,
-  FcApproval,
-} from "react-icons/fc";
+
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../Hook/useAdmin";
 import useSeller from "../Hook/useSeller";
@@ -18,11 +6,13 @@ import useSeller from "../Hook/useSeller";
 const Dashboard = () => {
   const [isAdmin] = useAdmin()
   const [isSeller] = useSeller()
+
+  console.log(isAdmin);
   return (
     <div>
       <div className="drawer md:drawer-mobile">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">
+        <div className="drawer-content p-5">
           {/* Page content here */}
           <Outlet></Outlet>
           <label
@@ -34,29 +24,34 @@ const Dashboard = () => {
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+          <ul className="menu p-4 w-80 h-full bg-indigo-400 text-base-content">
             {/* Sidebar content here */}
             <div className=" my-6">
               <h1 className="text-4xl font-semibold flex items-center gap-2">
-                Focus Studio <FcCamera></FcCamera>
+                RoboZone 
               </h1>
-              <p>Best Photography teaching platform</p>
+              
             </div>
             {isAdmin && (
               <>
                 <li>
                   <NavLink to="/">
-                    <FcHome></FcHome> Admin Home
+                    Admin Home
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/dashboard/manageClass">
-                    <FcBookmark></FcBookmark> Manage Classes
+                  <NavLink to="/dashboard/addToy">
+                    Add Items
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/dashboard/myToy">
+                    My Items
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/dashboard/allUser">
-                    <FcBusinessman></FcBusinessman> Manage Users
+                    Manage Users
                   </NavLink>
                 </li>
               </>
@@ -65,17 +60,17 @@ const Dashboard = () => {
               <>
                 <li>
                   <NavLink to="/">
-                    <FcHome></FcHome> Instructor Home
+                  Seller Home
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/dashboard/addClass">
-                    <FcAddDatabase></FcAddDatabase> Add Class
+                  <NavLink to="/dashboard/addItems">
+                    Add Items
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/dashboard/myClass">
-                    <FcBookmark></FcBookmark> My Classes
+                  <NavLink to="/dashboard/myItems">
+                    My Items
                   </NavLink>
                 </li>
               </>
@@ -84,27 +79,17 @@ const Dashboard = () => {
               <>
                 <li>
                   <NavLink to="/dashboard/userProfile">
-                    <FcHome></FcHome> User Home
+                    User Home
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/dashboard/selected">
-                    <FcApproval></FcApproval> Selected Classes
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/enroll">
-                    <FcApprove></FcApprove> Enrolled Classes
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/history">
-                    <FcCurrencyExchange></FcCurrencyExchange> Payment History
+                    Selected Items
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/dashboard/addReview">
-                    <FcLike></FcLike> Add Review
+                    Add Review
                   </NavLink>
                 </li>
               </>
@@ -112,17 +97,12 @@ const Dashboard = () => {
             <div className="divider"></div>
             <li>
               <NavLink to="/">
-                <FcHome></FcHome> Home Page
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/classes">
-                <FcClapperboard></FcClapperboard> All Classes
+                Home Page
               </NavLink>
             </li>
             <li>
               <NavLink to="/dashboard/contact">
-                <FcContacts></FcContacts> Contact
+                Contact
               </NavLink>
             </li>
           </ul>

@@ -36,7 +36,7 @@ const SignUp = () => {
           email: email,
           photoURL: photo,
         };
-        fetch("http://localhost:5000/users", {
+        fetch("https://robot-world-server.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

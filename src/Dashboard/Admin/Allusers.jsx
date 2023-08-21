@@ -5,12 +5,12 @@ import Swal from "sweetalert2";
 const AllUsers = () => {
 
   const { data: users = [], refetch } = useQuery(["users"], async () => {
-    const res = await fetch("http://localhost:5000/users");
+    const res = await fetch("https://robot-world-server.vercel.app/users");
     return res.json();
   });
 
   const handleAdmin = (user) => {
-    fetch(`http://localhost:5000/users/admin/${user._id}`, {
+    fetch(`https://robot-world-server.vercel.app/users/admin/${user._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -28,7 +28,7 @@ const AllUsers = () => {
   };
 
   const handleInstructor = (user) => {
-    fetch(`http://localhost:5000/users/seller/${user._id}`, {
+    fetch(`https://robot-world-server.vercel.app/users/seller/${user._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())

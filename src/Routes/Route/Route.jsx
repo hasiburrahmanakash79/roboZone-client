@@ -14,6 +14,7 @@ import PrivateRoute from "../PrivateRoute";
 import UpdateToy from "../../UpdateToy/UpdateToy";
 import Dashboard from "../../Layouts/Dashboard";
 import AllUsers from "../../Dashboard/Admin/Allusers";
+import Contact from "../../Dashboard/Admin/Contact";
 
 
 const router = createBrowserRouter([
@@ -60,7 +61,19 @@ const router = createBrowserRouter([
         {
           path:'allUser',
           element: <AllUsers></AllUsers>
-        }
+        },
+        {
+          path: 'addToy',
+          element: <AddToys></AddToys>
+        },
+        {
+          path: 'myToy',
+          element: <MyToys></MyToys>
+        },
+        {
+          path: 'contact',
+          element: <Contact></Contact>
+        },
       ]
     },
     {

@@ -28,27 +28,15 @@ const Navbar = () => {
           All Toys
         </Link>
       </li>
-      {user?.email ? (
-        <>
-          <li>
-            <Link to="/myToy" className="font-semibold">
-              My Toys
-            </Link>
-          </li>
-          <li>
-            <Link to="/addToy" className="font-semibold">
-              Add Toy
-            </Link>
-          </li>
-          <li>
-            <Link to="/dashboard" className="font-semibold">
-              Dashboard
-            </Link>
-          </li>
-        </>
+      {/* {user?.email ? (
+        <li>
+          <Link to="/dashboard" className="font-semibold">
+            Dashboard
+          </Link>
+        </li>
       ) : (
         <></>
-      )}
+      )} */}
     </>
   );
 
@@ -96,6 +84,11 @@ const Navbar = () => {
             >
               <li>
                 <Link className="justify-between">{user?.displayName}</Link>
+              </li>
+              <li>
+                <Link to="/dashboard" className="font-semibold">
+                  Dashboard
+                </Link>
               </li>
               <li>
                 <Link onClick={handleLogOut}>Log Out</Link>
