@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import useTitle from "../Hooks/useTitle";
 
 const ToyDetails = () => {
@@ -28,9 +28,9 @@ const ToyDetails = () => {
             <p className="text-4xl font-semibold mb-3"> {toyName}</p>
             <p className="text-xl font-semibold text-yellow-600">Price: ${price}</p>
             <p>{description}</p>
-            <button className="btn btn-warning btn-outline btn-sm my-2">
+            <Link to='/addToCart' className="btn btn-warning btn-outline btn-sm my-2">
               Add to Cart
-            </button>
+            </Link>
             <div className="md:flex gap-10 text-red-400">
               <div>
                 <p>Category: {category}</p>

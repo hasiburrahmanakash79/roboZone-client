@@ -15,6 +15,7 @@ import UpdateToy from "../../UpdateToy/UpdateToy";
 import Dashboard from "../../Layouts/Dashboard";
 import AllUsers from "../../Dashboard/Admin/Allusers";
 import Contact from "../../Dashboard/Admin/Contact";
+import AddToCart from "../../ToyDetails/AddToCart";
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
           path: '/myToy',
           element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
         },
+        {
+          path: '/addToCart',
+          element: <PrivateRoute><AddToCart/></PrivateRoute>
+        },
+
         {
           path: '/updateToy/:id',
           element: <UpdateToy></UpdateToy>,

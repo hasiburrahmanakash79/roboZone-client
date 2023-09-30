@@ -1,5 +1,5 @@
 
-import { NavLink, Outlet } from "react-router-dom";
+import {  NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../Hook/useAdmin";
 import useSeller from "../Hook/useSeller";
 
@@ -77,21 +77,21 @@ const Dashboard = () => {
             )}
             {!isAdmin && !isSeller &&(
               <>
-                <li>
-                  <NavLink to="/dashboard/userProfile">
+                {/* <li>
+                  <Link>
                     User Home
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/dashboard/selected">
+                  <Link>
                     Selected Items
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/dashboard/addReview">
+                  <Link>
                     Add Review
-                  </NavLink>
-                </li>
+                  </Link>
+                </li> */}
               </>
             )}
             <div className="divider"></div>

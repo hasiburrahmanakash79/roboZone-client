@@ -45,6 +45,31 @@ const AllUsers = () => {
       });
   };
 
+  const handleDeleteUser = user => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to remove this user!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then(result => {
+      if (result.isConfirmed) {
+        fetch(`https://robot-world-server.vercel.app/user/${user._id}`, {
+          method: 'DELETE'
+        })
+          .then(res => res.json())
+          .then(data => {
+            refetch()
+            if (data.deletedCount > 0) {
+              Swal.fire('Deleted!', 'User has been deleted.', 'success')
+            }
+          })
+      }
+    })
+  }
+
   
 
   return (
@@ -101,7 +126,7 @@ const AllUsers = () => {
                   )}
                 </td>
                 <td>
-                  <button
+                  <button onClick={() => handleDeleteUser(user)}
                     className="text-white bg-red-700 p-2 rounded"
                   >
                     <FaTrashAlt></FaTrashAlt>
