@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import Lottie from "lottie-react";
+import loginLottie from "../../../src/assets/login.json";
 
 const SignUp = () => {
   const [error, setError] = useState('')
@@ -65,8 +67,12 @@ const SignUp = () => {
   return (
     <div className="hero min-h-screen">
       <div className="md:flex justify-between items-center gap-12 px-3">
-        <div className="md:w-1/2">
-          <img src="https://i.ibb.co/jDMz1bj/login-page-banner.png" alt="" />
+      <div className="md:w-1/2">
+        <Lottie
+              animationData={loginLottie}
+              loop={true}
+              className="w-full md:h-[900px]"
+            />
         </div>
         <div className="md:w-1/2 border rounded-lg bg-base-100">
         <div className=" text-center">

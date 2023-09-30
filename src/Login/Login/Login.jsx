@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import useTitle from "../../Hooks/useTitle";
+import Lottie from "lottie-react";
+import loginLottie from "../../../src/assets/login.json";
 
 const Login = () => {
   const [passShow, setPassShow] = useState(false);
@@ -52,7 +54,11 @@ const Login = () => {
     <div className="hero min-h-screen">
       <div className="md:flex justify-between items-center gap-12 px-3">
         <div className="md:w-1/2">
-          <img src="https://i.ibb.co/jDMz1bj/login-page-banner.png" alt="" />
+        <Lottie
+              animationData={loginLottie}
+              loop={true}
+              className="w-full md:h-[900px]"
+            />
         </div>
         <div className="md:w-1/2 border rounded-lg bg-base-100">
           <div className=" text-center">
